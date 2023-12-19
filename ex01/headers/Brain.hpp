@@ -12,7 +12,7 @@ class Brain
 		Brain();
 		Brain( const Brain & src );
 		~Brain();
-		Brain & operator = ( const Brain &rhs );
+		Brain & operator=(const Brain &rhs );
 };
 
 

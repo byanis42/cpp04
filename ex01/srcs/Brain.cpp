@@ -6,7 +6,10 @@ Brain::Brain()
 	std::cout << "Brain constructor called" << std::endl;
 }
 
-Brain::Brain( const Brain &src ) { *this = src; }
+Brain::Brain( const Brain &src ) {
+	*this = src;
+	std::cout << "Brain copy constructor called" << std::endl;
+}
 
 Brain::~Brain()
 {

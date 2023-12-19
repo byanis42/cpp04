@@ -19,23 +19,20 @@ int main()
 	delete j;	//should not create a leak
 	delete i;
 
-	// Dog basic;
-	// {
-	// 	Dog tmp = basic;
-	// }
+// 	Dog basic;
+// 	{
+// 		Dog tmp = basic;
+// 	}
 }
 
 /*
 
-For the Dog basic example :
+Dog basic exemple :
 
-Animal constructor called
-Dog constructor called
-Brain constructor called
-Brain Destructor called   // Destruction of the Brain created in Dog
-Dog Destructor called    // Destruction of the Dog, which triggers the Animal destructor
-Animal destructor called // Destruction of the Animal
-Brain Destructor called   // Destruction of the Brain created in the temporary Dog (tmp) within the scope
-Dog Destructor called    // Destruction of the temporary Dog (tmp)
+Construction de l'Animal (classe de base).
+Construction du Dog, qui appelle également le constructeur de Brain.
+Construction de la copie tmp de l'objet basic, appelant le constructeur de copie de Brain.
+Destruction de tmp dans la portée, appelant le destructeur du Dog temporaire, puis le destructeur de l'Animal temporaire (ce qui déclenche la destruction du Brain temporaire).
+Destruction de basic, appelant le destructeur du Dog basic, puis le destructeur de l'Animal basic (ce qui déclenche la destruction du Brain basic).
 
 */
