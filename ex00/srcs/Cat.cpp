@@ -1,6 +1,10 @@
 #include "../headers/Cat.hpp"
 
-Cat::Cat() { this->_type = "Cat"; }
+Cat::Cat()
+{
+	this->_type = "Cat";
+	std::cout << "Cat constructor called" << std::endl;
+}
 
 Cat::Cat( const Cat &src ) : Animal(src) {
 	*this = src;

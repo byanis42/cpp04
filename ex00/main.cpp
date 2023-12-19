@@ -21,4 +21,18 @@ int main()
 	delete i;
 	delete meta;
 	delete Wrongmeta;
+
+	// Example without virtual keyword (non-polymorphic behavior)
+
+	// WrongCat *nonPolymorphicWrongCat = new WrongCat();
+	// WrongAnimal *nonPolymorphicWrongAnimal = nonPolymorphicWrongCat;
+
+	// std::cout << nonPolymorphicWrongCat->getType() << " " << std::endl;
+	// std::cout << nonPolymorphicWrongAnimal->getType() << " " << std::endl;
+
+	// nonPolymorphicWrongCat->makeSound();       // Output should be the Wrong Cat sound!
+	// nonPolymorphicWrongAnimal->makeSound();    // Output should be the default Wrong Animal sound!
+
+	// delete nonPolymorphicWrongCat;
+
 }
