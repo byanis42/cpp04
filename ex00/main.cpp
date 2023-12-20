@@ -15,7 +15,7 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-	Wrongmeta->makeSound();
+	Wrongmeta->makeSound(); // will not output the WrongCat sound since not virtual
 
 	delete j;
 	delete i;
@@ -24,15 +24,15 @@ int main()
 
 	// Example without virtual keyword (non-polymorphic behavior)
 
-	// WrongCat *nonPolymorphicWrongCat = new WrongCat();
-	// WrongAnimal *nonPolymorphicWrongAnimal = nonPolymorphicWrongCat;
+	// const WrongAnimal* meta = new WrongAnimal();
+	// const Animal* j = new Dog();
+	// const WrongAnimal* i = new WrongCat();
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+	// i->makeSound(); //will output the cat sound!
+	// j->makeSound();
+	// meta->makeSound();
 
-	// std::cout << nonPolymorphicWrongCat->getType() << " " << std::endl;
-	// std::cout << nonPolymorphicWrongAnimal->getType() << " " << std::endl;
-
-	// nonPolymorphicWrongCat->makeSound();       // Output should be the Wrong Cat sound!
-	// nonPolymorphicWrongAnimal->makeSound();    // Output should be the default Wrong Animal sound!
-
-	// delete nonPolymorphicWrongCat;
+	// return 0;
 
 }
