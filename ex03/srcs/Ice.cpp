@@ -1,6 +1,6 @@
-#include "Ice.hpp"
-#include "ICharacter.hpp"
-#include "IMateriaSource.hpp"
+#include "../headers/Ice.hpp"
+#include "../headers/ICharacter.hpp"
+#include "../headers/IMateriaSource.hpp"
 
 Ice::Ice() : _type("ice")
 {

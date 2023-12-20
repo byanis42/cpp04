@@ -1,6 +1,6 @@
-#include "Cure.hpp"
-#include "ICharacter.hpp"
-#include "IMateriaSource.hpp"
+#include "../headers/Cure.hpp"
+#include "../headers/ICharacter.hpp"
+#include "../headers/IMateriaSource.hpp"
 
 Cure::Cure() : _type("cure")
 {
